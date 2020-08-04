@@ -24,6 +24,13 @@ I am open for work as an **intern in some IT company** where I could learn progr
 langauges or other concepts of IT field. If you would like to propose me some **internship** or a 
 **trainee job position** related to IT you can contact me through my blog [mstem.net](www.mstem.net) or social media. 
 All links are included at my blog.
+
 ## Demo
+I will try to make live demo accessible to play through Chrome Browser posted at my blog but 
+first I have to construct that game. So first things first.
+
+Link to this Github repository will be available at my blog [mstem.net](www.mstem.net) so you will be able to 
+download code for this game and play in on your computer.
+
 ## Credentials
 ## Licensing
