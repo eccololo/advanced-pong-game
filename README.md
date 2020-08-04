@@ -12,7 +12,14 @@ Game Development in this langauge. I run a **STEM blog** at [mstem.net](www.mste
 about my life as well as Python programming and mathematics.
 
 On my blog you can find all links to my **social media**. Feel free to connect there with me. 
+
 ## Experience
+At the moment I have only a little experience in **Web Design** field by doing a company website for
+one company in Scotland. You can see this website at [Thistle Apartments](https://mstem.net/projects/ta/index.php).
+
+This is not present website of this company as it was replaced by newer version made by some other entity.
+
+## Hire me
 ## Demo
 ## Credentials
 ## Licensing
