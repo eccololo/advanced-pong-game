@@ -20,7 +20,7 @@ one company in Scotland. You can see this website at [Thistle Apartments](https:
 This is not present website of this company as it was replaced by newer version made by some other entity.
 
 ## Hire me
-I am open for work as an **intern in some IT company** where I could learn programming in Python and other 
+I am open for work as an **intern in some IT company in Kraków, Poland** where I could learn programming in Python and other 
 langauges or other concepts of IT field. If you would like to propose me some **internship** or a 
 **trainee job position** related to IT you can contact me through my blog [mstem.net](www.mstem.net) or social media. 
 All links are included at my blog.
