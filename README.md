@@ -33,4 +33,7 @@ Link to this Github repository will be available at my blog [mstem.net](www.mste
 download code for this game and play in on your computer.
 
 ## Credentials
+I would like to thank here Christian Thompson, creator of [@TokyoEdTech](https://www.youtube.com/channel/UC2vm-0XX5RkWCXWwtBZGOXg) 
+YouTube Channel. I learned a lot of Game Development in Python from this channel.
+
 ## Licensing
