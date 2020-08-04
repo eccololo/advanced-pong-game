@@ -7,6 +7,11 @@ It is my own project and I am building it **from scratch**. I hope you will find
 useful and I hope it will teach you something about Python or Game Dev in this language.
  
 ## Authors
+Hello, my name is **Mateusz Hyla** and I am intermediate at Python programming and beginner at
+Game Development in this langauge. I run a **STEM blog** at [mstem.net](www.mstem.net). I post there articles 
+about my life as well as Python programming and mathematics.
+
+On my blog you can find all links to my **social media**. Feel free to connect there with me. 
 ## Experience
 ## Demo
 ## Credentials
