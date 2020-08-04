@@ -37,3 +37,5 @@ I would like to thank here Christian Thompson, creator of [@TokyoEdTech](https:/
 YouTube Channel. I learned a lot of Game Development in Python from this channel.
 
 ## Licensing
+I make this game for free to download, distribute, modify or play. I think the name of
+the licence would be General Public Licence (GPL).
