@@ -20,6 +20,12 @@ class Sprite(turtle.Turtle):
         self.width = width
         self.height = height
         self.pen = turtle.Turtle()
+        self.dx = 10
+        self.dy = 10
+        self.max_dy = 40
+        self.max_dx = 40
+        self.min_dy = 10
+        self.min_dx = 10
 
     def update(self):
         self.pendown()
@@ -30,10 +36,18 @@ class Sprite(turtle.Turtle):
         self.pen.penup()
 
     def move_down(self):
-        self.y -= 10
+        self.dy += 1
+        if self.dy <= self.max_dy:
+            self.y -= self.dy
 
     def move_up(self):
-        self.y += 10
+        self.dy += 1
+        if self.dy <= self.max_dy:
+            self.y += self.dy
+
+    def reset_move(self):
+        self.dy = self.min_dy
+        self.dx = self.min_dx
 
 
 # ----------- End of All Classes Space ---------
