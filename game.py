@@ -21,15 +21,13 @@ class Sprite(turtle.Turtle):
         self.height = height
         self.pen = turtle.Turtle()
 
-    def render(self):
+    def update(self):
+        self.pendown()
         self.pen.goto(self.x, self.y)
         self.pen.color(self.color)
         self.pen.shape(self.shape)
         self.pen.shapesize(self.width, self.height, None)
-        self.pen.stamp()
-
-    def update(self):
-        pass
+        self.pen.penup()
 
     def move_down(self):
         self.y -= 10
@@ -49,4 +47,4 @@ wn.onkeypress(sprite.move_up, "Up")
 
 while True:
     wn.update()
-    sprite.render()
+    sprite.update()
