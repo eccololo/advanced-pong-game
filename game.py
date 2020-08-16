@@ -24,12 +24,20 @@ class Sprite(turtle.Turtle):
         self.pen.color(self.color)
         self.pen.shape(self.shape)
         self.pen.stamp()
+        
+    def update(self):
+        pass
+
 
 
 # ----------- End of All Classes Space ---------
 
 sprite = Sprite(100, 100, "red", "square")
 
+# ----------- Keyboard Binding Space -----------
+wn.listen()
+wn.onkeypress("move_down", "Down")
+wn.onkeypress("move_up", "Up")
 
 while True:
     wn.update()
