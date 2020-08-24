@@ -51,6 +51,12 @@ class Ball(Sprite):
         self.x -= self.speed
         self.y += self.speed
 
+        if self._is_collision_border():
+            print("Collision!")
+
+    def _is_collision_border(self):
+        return self.y > 390 or self.y < -390
+
 
 # ----------- End of All Classes Space ---------
 
