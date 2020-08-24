@@ -9,8 +9,7 @@ wn.tracer(0)
 
 
 # ----------- All Classes Space ----------------
-# FixMe:
-#  1. Fix acceleration of sprite movement
+
 class Sprite(turtle.Turtle):
     def __init__(self, x, y, color, shape, width, height):
         turtle.Turtle.__init__(self)
@@ -37,26 +36,16 @@ class Sprite(turtle.Turtle):
         self.pen.penup()
 
     def move_down(self):
-        self.dy += 1
-        if self.dy <= self.max_dy:
-            self.y -= self.dy
+        self.dy -= 10
 
     def move_up(self):
-        self.dy += 1
-        if self.dy <= self.max_dy:
-            self.y += self.dy
-
-    def reset_move(self):
-        self.dy = self.min_dy
-        self.dx = self.min_dx
+        self.dy += 10
 
 
-# FixMe:
-#  1. Add fixed player cordinates x and y.
-#  2. Add player color and shape and other
 class Player(Sprite):
     def __init__(self):
         Sprite.__init__(x, y, color, shape, width, height)
+
 
 # ----------- End of All Classes Space ---------
 
