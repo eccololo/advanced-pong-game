@@ -6,6 +6,7 @@ wn = turtle.Screen()
 wn.bgcolor("black")
 wn.title("Advanced Pong Game by Mateusz Hyla | @HylaTech")
 wn.tracer(0)
+wn.setup(1400, 800)
 
 
 # ----------- All Classes Space ----------------
@@ -38,18 +39,22 @@ class Sprite(turtle.Turtle):
 
 class Player(Sprite):
     def __init__(self, x, y, color, shape, width, height):
-        Sprite.__init__(x, y, color, shape, width, height)
+        Sprite.__init__(self, x, y, color, shape, width, height)
 
 
 # ----------- End of All Classes Space ---------
 
-sprite = Sprite(100, 100, "red", "square", 5, 1)
+protector = Player(-500, 0, "green", "square", 5, 1)
+agressor = Player(500, 0, "red", "square", 5, 1)
 
 # ----------- Keyboard Binding Space -----------
 wn.listen()
-wn.onkeypress(sprite.move_down, "Down")
-wn.onkeypress(sprite.move_up, "Up")
+wn.onkeypress(agressor.move_down, "Down")
+wn.onkeypress(agressor.move_up, "Up")
+wn.onkeypress(protector.move_down, "S")
+wn.onkeypress(protector.move_up, "W")
 
 while True:
     wn.update()
-    sprite.update()
+    protector.update()
+    agressor.update()
