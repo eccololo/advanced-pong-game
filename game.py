@@ -60,9 +60,11 @@ class Ball(Sprite):
         elif self._is_collision_border_bottom_y():
             self.dy *= -1
         elif self._is_collision_border_left_x():
-            pass
+            self.dx *= -1
+            self._reset_ball()
         elif self._is_collision_border_right_x():
-            pass
+            self.dx *= -1
+            self._reset_ball()
 
     def _is_collision_border_top_y(self):
         return self.y > (WINDOW_HEIGHT / 2) - 5
@@ -77,7 +79,8 @@ class Ball(Sprite):
         return self.x > (WINDOW_WIDTH / 2) - 5
 
     def _reset_ball(self):
-        pass
+        self.x = 0
+        self.y = 0
 
 
 # ----------- End of All Classes Space ---------
