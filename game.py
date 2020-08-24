@@ -38,6 +38,11 @@ class Sprite(turtle.Turtle):
 
     def move_up(self):
         self.y += 10
+    
+    # FIXME:
+    #   1. Here is something to fix.
+    def is_collision(self, other):
+        return math.sqrt(math.pow(self.x - other.x) + math.pow(self.y - other.y)) <= 0
 
 
 class Player(Sprite):
@@ -67,16 +72,16 @@ class Ball(Sprite):
             self._reset_ball()
 
     def _is_collision_border_top_y(self):
-        return self.y > (WINDOW_HEIGHT / 2) - 5
+        return self.y > (WINDOW_HEIGHT / 2) - 10
 
     def _is_collision_border_bottom_y(self):
-        return self.y < -((WINDOW_HEIGHT / 2) + 5)
+        return self.y < -((WINDOW_HEIGHT / 2) - 20)
 
     def _is_collision_border_left_x(self):
-        return self.x < -((WINDOW_WIDTH / 2) + 5)
+        return self.x < -((WINDOW_WIDTH / 2) + 10)
 
     def _is_collision_border_right_x(self):
-        return self.x > (WINDOW_WIDTH / 2) - 5
+        return self.x > (WINDOW_WIDTH / 2) - 10
 
     def _reset_ball(self):
         self.x = 0
