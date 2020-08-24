@@ -2,11 +2,14 @@ import turtle
 import random
 import math
 
+WINDOW_WIDTH = 1400
+WINDOW_HEIGHT = 800
+
 wn = turtle.Screen()
 wn.bgcolor("black")
 wn.title("Advanced Pong Game by Mateusz Hyla | @HylaTech")
 wn.tracer(0)
-wn.setup(1400, 800)
+wn.setup(WINDOW_WIDTH, WINDOW_HEIGHT)
 
 
 # ----------- All Classes Space ----------------
@@ -51,10 +54,13 @@ class Ball(Sprite):
         self.x -= self.speed
         self.y += self.speed
 
-        if self._is_collision_border():
+        if self._is_collision_border_y():
             print("Collision!")
 
-    def _is_collision_border(self):
+    def _is_collision_border_y(self):
+        return self.y > 390 or self.y < -390
+
+    def _is_collision_border_x(self):
         return self.y > 390 or self.y < -390
 
 
