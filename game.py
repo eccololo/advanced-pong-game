@@ -20,12 +20,6 @@ class Sprite(turtle.Turtle):
         self.width = width
         self.height = height
         self.pen = turtle.Turtle()
-        self.dx = 10
-        self.dy = 10
-        self.max_dy = 40
-        self.max_dx = 40
-        self.min_dy = 10
-        self.min_dx = 10
 
     def update(self):
         self.pendown()
@@ -36,14 +30,14 @@ class Sprite(turtle.Turtle):
         self.pen.penup()
 
     def move_down(self):
-        self.dy -= 10
+        self.y -= 10
 
     def move_up(self):
-        self.dy += 10
+        self.y += 10
 
 
 class Player(Sprite):
-    def __init__(self):
+    def __init__(self, x, y, color, shape, width, height):
         Sprite.__init__(x, y, color, shape, width, height)
 
 
