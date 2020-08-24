@@ -48,22 +48,36 @@ class Player(Sprite):
 class Ball(Sprite):
     def __init__(self, x, y, color, shape):
         Sprite.__init__(self, x, y, color, shape, 1, 1)
-        self.speed = 3
+        self.dx = 3
+        self.dy = 3
 
     def move(self):
-        self.x -= self.speed
-        self.y += self.speed
+        self.x -= self.dx
+        self.y += self.dy
 
-        if self._is_collision_border_y():
-            print("Collision Y!")
-        elif self._is_collision_border_x():
-            print("Collision X!")
+        if self._is_collision_border_top_y():
+            self.dy *= -1
+        elif self._is_collision_border_bottom_y():
+            self.dy *= -1
+        elif self._is_collision_border_left_x():
+            pass
+        elif self._is_collision_border_right_x():
+            pass
 
-    def _is_collision_border_y(self):
-        return self.y > (WINDOW_HEIGHT / 2) - 5 or self.y < -((WINDOW_HEIGHT / 2) + 5)
+    def _is_collision_border_top_y(self):
+        return self.y > (WINDOW_HEIGHT / 2) - 5
 
-    def _is_collision_border_x(self):
-        return self.x > (WINDOW_WIDTH / 2) - 5 or self.x < -((WINDOW_WIDTH / 2) + 5)
+    def _is_collision_border_bottom_y(self):
+        return self.y < -((WINDOW_HEIGHT / 2) + 5)
+
+    def _is_collision_border_left_x(self):
+        return self.x < -((WINDOW_WIDTH / 2) + 5)
+
+    def _is_collision_border_right_x(self):
+        return self.x > (WINDOW_WIDTH / 2) - 5
+
+    def _reset_ball(self):
+        pass
 
 
 # ----------- End of All Classes Space ---------
