@@ -42,6 +42,11 @@ class Player(Sprite):
         Sprite.__init__(self, x, y, color, shape, width, height)
 
 
+class Ball(Sprite):
+    def __init__(self, x, y, color, shape, width, height):
+        Sprite.__init__(self, x, y, color, shape, width, height)
+
+
 # ----------- End of All Classes Space ---------
 
 protector = Player(-500, 0, "green", "square", 5, 1)
@@ -51,8 +56,8 @@ agressor = Player(500, 0, "red", "square", 5, 1)
 wn.listen()
 wn.onkeypress(agressor.move_down, "Down")
 wn.onkeypress(agressor.move_up, "Up")
-wn.onkeypress(protector.move_down, "S")
-wn.onkeypress(protector.move_up, "W")
+wn.onkeypress(protector.move_down, "s")
+wn.onkeypress(protector.move_up, "w")
 
 while True:
     wn.update()
