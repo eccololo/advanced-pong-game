@@ -34,10 +34,10 @@ class Sprite(turtle.Turtle):
         self.pen.shapesize(self.width, self.height, None)
         self.pen.penup()
 
-    # FIXME:
-    #   1. Here is something to fix.
+    # TODO:
+    #   1: Do collision.
     def is_collision(self, other):
-        return math.sqrt(math.pow(self.x - other.x) + math.pow(self.y - other.y)) <= 0
+        pass
 
 
 class Player(Sprite):
@@ -112,3 +112,8 @@ while True:
     ball.update()
     ball.move()
 
+    if protector.is_collision(ball):
+        print("Hit protector")
+
+    if agressor.is_collision(ball):
+        print("Hit agressor")
