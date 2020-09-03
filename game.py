@@ -2,7 +2,7 @@ import turtle
 import random
 import math
 
-WINDOW_WIDTH = 1400
+WINDOW_WIDTH = 1600
 WINDOW_HEIGHT = 800
 
 wn = turtle.Screen()
