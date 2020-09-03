@@ -38,7 +38,7 @@ class Sprite(turtle.Turtle):
 
     def move_up(self):
         self.y += 10
-    
+
     # FIXME:
     #   1. Here is something to fix.
     def is_collision(self, other):
@@ -53,8 +53,10 @@ class Player(Sprite):
 class Ball(Sprite):
     def __init__(self, x, y, color, shape):
         Sprite.__init__(self, x, y, color, shape, 1, 1)
-        self.dx = 3
-        self.dy = 3
+        rand_dx = random.randint(-4, 4)
+        rand_dy = random.randint(-4, 4)
+        self.dx = rand_dx
+        self.dy = rand_dy
 
     def move(self):
         self.x -= self.dx
