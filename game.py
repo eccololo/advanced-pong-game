@@ -42,12 +42,20 @@ class Sprite(turtle.Turtle):
 class Player(Sprite):
     def __init__(self, x, y, color, shape, width, height):
         Sprite.__init__(self, x, y, color, shape, width, height)
+        self.move_up_flag = False
+        self.move_down_flag = False
+
+    def move_down_start(self):
+        self.move_down_flag = True
+
+    def move_up_start(self):
+        self.move_up_flag = True
 
     def move_down(self):
-        self.y -= 10
+        self.y -= 1
 
     def move_up(self):
-        self.y += 10
+        self.y += 1
 
 
 class Ball(Sprite):
@@ -98,10 +106,10 @@ ball = Ball(0, 0, "green", "circle")
 
 # ----------- Keyboard Binding Space -----------
 wn.listen()
-wn.onkeypress(agressor.move_down, "Down")
-wn.onkeypress(agressor.move_up, "Up")
-wn.onkeypress(protector.move_down, "s")
-wn.onkeypress(protector.move_up, "w")
+wn.onkeypress(agressor.move_down_start, "Down")
+wn.onkeypress(agressor.move_up_start, "Up")
+wn.onkeypress(protector.move_down_start, "s")
+wn.onkeypress(protector.move_up_start, "w")
 
 while True:
     wn.update()
@@ -109,3 +117,11 @@ while True:
     agressor.update()
     ball.update()
     ball.move()
+    if agressor.move_down_flag:
+        for _ in range(30):
+            agressor.move_down()
+
+    if protector.move_down_flag:
+        for _ in range(30):
+            protector.move_down()
+
