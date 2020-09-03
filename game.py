@@ -33,12 +33,6 @@ class Sprite(turtle.Turtle):
         self.pen.shapesize(self.width, self.height, None)
         self.pen.penup()
 
-    def move_down(self):
-        self.y -= 10
-
-    def move_up(self):
-        self.y += 10
-
     # FIXME:
     #   1. Here is something to fix.
     def is_collision(self, other):
@@ -48,6 +42,12 @@ class Sprite(turtle.Turtle):
 class Player(Sprite):
     def __init__(self, x, y, color, shape, width, height):
         Sprite.__init__(self, x, y, color, shape, width, height)
+
+    def move_down(self):
+        self.y -= 10
+
+    def move_up(self):
+        self.y += 10
 
 
 class Ball(Sprite):
